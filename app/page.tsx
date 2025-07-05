@@ -249,38 +249,38 @@ END:VCARD`
                       label: "Office",
                       value: contactInfo.phone,
                       href: `tel:${contactInfo.phone}`,
-                      color: "blue",
+                      colorClass: "bg-blue-100 text-blue-600",
                     },
                     {
                       icon: Phone,
                       label: "Mobile",
                       value: contactInfo.mobile,
                       href: `tel:${contactInfo.mobile}`,
-                      color: "green",
+                      colorClass: "bg-green-100 text-green-600",
                     },
                     {
                       icon: Mail,
                       label: "Email",
                       value: contactInfo.email,
                       href: `mailto:${contactInfo.email}`,
-                      color: "red",
+                      colorClass: "bg-red-100 text-red-600",
                     },
                     {
                       icon: Globe,
                       label: "Website",
                       value: contactInfo.website,
                       href: `https://${contactInfo.website}`,
-                      color: "purple",
+                      colorClass: "bg-purple-100 text-purple-600",
                     },
-                  ].map(({ icon: Icon, label, value, href, color }, index) => (
+                  ].map(({ icon: Icon, label, value, href, colorClass }, index) => (
                     <div
                       key={index}
                       className="group flex items-center gap-4 p-4 rounded-xl hover:bg-gray-50 transition-all duration-300 cursor-pointer"
                     >
                       <div
-                        className={`bg-${color}-100 p-3 rounded-full group-hover:scale-110 transition-transform duration-300`}
+                        className={`${colorClass} p-3 rounded-full group-hover:scale-110 transition-transform duration-300`}
                       >
-                        <Icon className={`w-5 h-5 text-${color}-600`} />
+                        <Icon className="w-5 h-5" />
                       </div>
                       <div className="flex-1">
                         <p className="text-sm text-gray-600 font-medium">{label}</p>
